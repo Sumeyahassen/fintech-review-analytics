@@ -1,0 +1,8 @@
+# Data and sensitive files
+data/
+*.csv
+*.db
+*.sqlite
+__pycache__/
+.env
+*.pyc

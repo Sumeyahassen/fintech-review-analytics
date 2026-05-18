@@ -25,3 +25,44 @@ Project for analyzing Google Play Store reviews for Ethiopian Banks (CBE, BOA, D
 ```bash
 python scripts/scrape_reviews.py
 python scripts/preprocess.py
+## Task 2: Sentiment Analysis & Thematic Analysis
+
+### Objective
+To perform sentiment analysis on customer reviews and identify key business themes using Natural Language Processing (NLP).
+
+### Methodology
+- **Sentiment Model**: Used `distilbert-base-uncased-finetuned-sst-2-english` (DistilBERT Transformer model)
+- **Theme Detection**: Implemented custom rule-based keyword mapping for business-relevant themes
+- **Output Format**: Saved results with columns: `review_id`, `review`, `sentiment_label`, `sentiment_score`, `identified_theme`
+
+### Results
+
+- **Total Reviews Analyzed**: 2,736
+- **Sentiment Distribution**:
+  - Positive: **1,686** (61.6%)
+  - Negative: **1,050** (38.4%)
+
+- **Top Themes Identified**:
+  - Positive Feedback: 945
+  - Transaction Problems: 124
+  - Account Access Issues: 117
+  - Performance Issues: 90
+  - UI/UX Experience: 43
+  - Customer Support: 27
+
+### Insights
+- Majority of users have a **positive** experience with the fintech application.
+- Main areas of concern are **Transaction Problems** and **Account Access Issues**.
+- These findings can help the product team prioritize improvements.
+
+### Visualizations
+- Sentiment Distribution (Pie Chart)
+- Top Themes Distribution (Bar Chart)
+
+### Files & Deliverables
+- **Script**: `scripts/sentiment_analysis.py`
+- **Processed Data**: `data/processed/processed_reviews.csv`
+- **Charts**: `images/sentiment_distribution.png`, `images/top_themes.png`
+
+### Tool Selection Rationale
+DistilBERT was selected over traditional tools (TextBlob/VADER) because it provides better context understanding and higher accuracy for customer feedback analysis.

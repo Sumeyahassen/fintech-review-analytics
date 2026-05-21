@@ -66,3 +66,10 @@ To perform sentiment analysis on customer reviews and identify key business them
 
 ### Tool Selection Rationale
 DistilBERT was selected over traditional tools (TextBlob/VADER) because it provides better context understanding and higher accuracy for customer feedback analysis.
+## Task 3: Database Engineering
+
+- Database: PostgreSQL (`bank_reviews`)
+- Tables Created: `banks` and `reviews`
+- Total Records Inserted: **2736 reviews**
+- Used `psycopg2` + `SQLAlchemy` style batch insert
+- Successfully linked reviews with their respective banks
